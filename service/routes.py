@@ -57,6 +57,7 @@ def create_accounts():
         jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
     )
 
+
 ######################################################################
 # LIST ALL ACCOUNTS
 ######################################################################
@@ -128,7 +129,7 @@ def delete_accounts(account_id):
     account = Account.find(account_id)
     if account:
         account.delete()
-    
+
     return "", status.HTTP_204_NO_CONTENT
 
 
